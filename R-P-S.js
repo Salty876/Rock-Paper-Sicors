@@ -54,5 +54,23 @@ function theGame(){
 let gameResult = theGame()
 console.log(gameResult)
 
+let playerPoints = 0
+let npcPoints = 0
+
+function fullGame(){
+for (let round = 0; round < 5; round++ ){
+    theGame()
+if (gameResult == "Scissors beats paper. You win!" ||gameResult == "Rock beats Scissors. You win!"||gameResult == "Paper beats Rock. You win!" ){
+    return playerPoints+1
+}
+else if (gameResult == "Scissors beats paper. You lose!" || gameResult == "Rock beats Scissors. You lose!" || gameResult == "Paper beats Rock. You lose!" ){
+return npcChoice+1}
+
+console.log(npcPoints, "for computer and", playerPoints, "for you")
+
+}
+
+}
+
 
 
