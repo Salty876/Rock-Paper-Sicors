@@ -1,24 +1,27 @@
 let npcInput = Math.floor(Math.random()*3);
-let npcChoice
+
 let playerInput = prompt("Rock, Paper or Sizor?")
 function computerInput (){
     if (npcInput == 0) {
-        let npcChoice = ("Rock")
-        return npcChoice
+      
+        return "Rock"
     }
     else if (npcInput == 1)
     {
-        let npcChoice = ("Paper")
-        return npcChoice
+        
+        return "Paper"
     }
     else if (npcInput == 2)
     {
-         let npcChoice = ("Sizor")
-         return npcChoice
+        
+         return "Sizor"
     }
 }
+
+let npcChoice = computerInput()
 
 
 
 console.log(npcInput)
 console.log(npcChoice)
+
