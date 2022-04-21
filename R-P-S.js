@@ -4,17 +4,17 @@ let npcInput = Math.floor(Math.random()*3);
 function computerInput (){
     if (npcInput == 0) {
       
-        return "Rock"
+        return "rock"
     }
     else if (npcInput == 1)
     {
         
-        return "Paper"
+        return "paper"
     }
     else if (npcInput == 2)
     {
         
-         return "Sizor"
+         return "scissors"
     }
 }
 computerInput()
@@ -30,7 +30,29 @@ function playerChoice (){
 
 let finalPlayerChoice = playerChoice()
 
-console.log(finalPlayerChoice)
+function theGame(){
+   
+   
+    if (finalPlayerChoice === npcChoice ){
+    return "tie"
+    } else if (finalPlayerChoice == "rock" && npcChoice == "paper") {
+        return "Paper beats Rock. You lose!"
+    } else if (finalPlayerChoice == "paper" && npcChoice == "rock") {
+        return "Paper beats Rock. You win!"
+    } else if (finalPlayerChoice == "rock" && npcChoice == "scissors") {
+        return "Rock beats Scissors. You win!"
+    } else if (finalPlayerChoice == "scissors" && npcChoice == "rock") {
+        return "Rock beats Scissors. You lose!"
+    } else if (finalPlayerChoice == "scissors" && npcChoice == "paper") {
+        return "Scissors beats paper. You win!"
+    } else if (finalPlayerChoice == "paper" && npcChoice == "scissors") {
+        return "Scissors beats paper. You lose!"
+    } 
+   
+}
+
+let gameResult = theGame()
+console.log(gameResult)
 
 
 
