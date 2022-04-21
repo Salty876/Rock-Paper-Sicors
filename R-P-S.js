@@ -1,6 +1,6 @@
 let npcInput = Math.floor(Math.random()*3);
 
-let playerInput = prompt("Rock, Paper or Sizor?")
+
 function computerInput (){
     if (npcInput == 0) {
       
@@ -17,11 +17,20 @@ function computerInput (){
          return "Sizor"
     }
 }
-
+computerInput()
 let npcChoice = computerInput()
 
+function playerChoice (){
+    guyChoose = prompt("What are you going to play?")
+    let miniscule = guyChoose.toLowerCase()
+    let finalizedChoice = miniscule.trim()
+    return finalizedChoice
+
+}
+
+let finalPlayerChoice = playerChoice()
+
+console.log(finalPlayerChoice)
 
 
-console.log(npcInput)
-console.log(npcChoice)
 
